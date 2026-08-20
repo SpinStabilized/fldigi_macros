@@ -80,7 +80,7 @@ AGN? AGN?\n
 // Macro # 12
 /$ 11 TX @>|
 <TX>\n
-de <MYCALL> k\n
+DE <MYCALL> K\n
 <RX>
 
 //

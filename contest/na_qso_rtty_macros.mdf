@@ -1,0 +1,265 @@
+//fldigi macro definition file extended
+// This file defines the macro structure(s) for the digital modem program, fldigi
+// It also serves as a basis for any macros that are written by the user
+//
+// The top line of this file should always be the first line in every macro 
+// definition file (.mdf) for the fldigi program to recognize it as such.
+//
+
+//
+// Macro # 1
+/$ 0 CQ @#+
+<TX><IDLE:1>\n
+CQ NAQP <MYCALL> <MYCALL> CQ \n
+<IDLE:1><RX><AFTER:15>
+
+//
+// Macro # 2
+/$ 1 Resp @>|
+<TX><IDLE:1>\n
+<CALL> <MYNAME> MD DE <MYCALL>\n
+<IDLE:1><RX>
+
+//
+// Macro # 3
+/$ 2 Run @>|
+<TX><IDLE:1>\n
+<CALL> TU DE <MYCALL> QRZ? \n
+<IDLE:1><RX>
+
+//
+// Macro # 4
+/$ 3 Stop @>|
+<TX><IDLE:1>\n
+<CALL> TU DE <MYCALL>\n
+<IDLE:1><RX>
+
+//
+// Macro # 5
+/$ 4 Log
+<LOG><CLRLOG>
+
+//
+// Macro # 6
+/$ 5 
+
+
+//
+// Macro # 7
+/$ 6 
+
+
+//
+// Macro # 8
+/$ 7 
+
+
+//
+// Macro # 9
+/$ 8 T/R
+<TX/RX>
+
+//
+// Macro # 10
+/$ 9 Tx @>>
+<TX><IDLE:1>
+
+//
+// Macro # 11
+/$ 10 Rx @||
+<IDLE:1><RX>
+
+//
+// Macro # 12
+/$ 11 TX @>|
+<TX>\n
+de <MYCALL> k\n
+<IDLE:1><RX>
+
+//
+// Macro # 13
+/$ 12 SP Hunt @>|
+<TX><IDLE:1>\n
+<MYCALL> <MYCALL>\n
+<IDLE:1><RX>
+
+//
+// Macro # 14
+/$ 13 SP Ans @>|
+<TX><IDLE:1>\n
+TU <MYNAME> MD de <MYCALL>\n
+<IDLE:1><RX>
+
+//
+// Macro # 15
+/$ 14 
+
+
+//
+// Macro # 16
+/$ 15 
+
+
+//
+// Macro # 17
+/$ 16 
+
+
+//
+// Macro # 18
+/$ 17 
+
+
+//
+// Macro # 19
+/$ 18 
+
+
+//
+// Macro # 20
+/$ 19 
+
+
+//
+// Macro # 21
+/$ 20 
+
+
+//
+// Macro # 22
+/$ 21 
+
+
+//
+// Macro # 23
+/$ 22 
+
+
+//
+// Macro # 24
+/$ 23 
+
+
+//
+// Macro # 25
+/$ 24 AGN? @>|
+<TX><IDLE:1>\n
+AGN? AGN?\n
+<IDLE:1><RX>
+
+//
+// Macro # 26
+/$ 25 RPT
+<TX><IDLE:1>\n
+BRIAN BRIAN MD MD\n
+<IDLE:1><RX>
+
+//
+// Macro # 27
+/$ 26 
+
+
+//
+// Macro # 28
+/$ 27 
+
+
+//
+// Macro # 29
+/$ 28 
+
+
+//
+// Macro # 30
+/$ 29 
+
+
+//
+// Macro # 31
+/$ 30 
+
+
+//
+// Macro # 32
+/$ 31 
+
+
+//
+// Macro # 33
+/$ 32 
+
+
+//
+// Macro # 34
+/$ 33 
+
+
+//
+// Macro # 35
+/$ 34 
+
+
+//
+// Macro # 36
+/$ 35 
+
+
+//
+// Macro # 37
+/$ 36 
+
+
+//
+// Macro # 38
+/$ 37 
+
+
+//
+// Macro # 39
+/$ 38 
+
+
+//
+// Macro # 40
+/$ 39 
+
+
+//
+// Macro # 41
+/$ 40 
+
+
+//
+// Macro # 42
+/$ 41 
+
+
+//
+// Macro # 43
+/$ 42 
+
+
+//
+// Macro # 44
+/$ 43 
+
+
+//
+// Macro # 45
+/$ 44 
+
+
+//
+// Macro # 46
+/$ 45 CLR Tx
+<CLRTX>
+
+//
+// Macro # 47
+/$ 46 CLR Rx
+<CLRRX>
+
+//
+// Macro # 48
+/$ 47 CLRALL
+<CLRRX><CLRTX>

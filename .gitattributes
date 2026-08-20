@@ -1,0 +1,13 @@
+# Auto detect text files and normalize line endings
+* text=auto
+
+# fldigi macro definition files
+*.mdf text eol=lf
+
+# Documentation
+*.md text eol=lf
+*.txt text eol=lf
+
+# Git config files
+.gitattributes text eol=lf
+.gitignore text eol=lf

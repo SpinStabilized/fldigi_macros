@@ -90,12 +90,14 @@ de <MYCALL> k\n
 
 //
 // Macro # 13
-/$ 12 
+/$ 12 Signal Good
+I have a good copy: <INFO1>\n
 
 
 //
 // Macro # 14
-/$ 13 
+/$ 13 Rough Copy
+I have an ok copy, loosing some characters: <INFO1>\n
 
 
 //

@@ -256,7 +256,8 @@ de <MYCALL> k\n
 
 //
 // Macro # 45
-/$ 44 
+/$ 44 Entry To QRZ
+<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_qrz.py</EXEC>
 
 
 //

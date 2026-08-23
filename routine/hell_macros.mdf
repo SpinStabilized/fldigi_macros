@@ -41,14 +41,14 @@ TNX GL 73 73  <CALL> DE <MYCALL> SK\n
 //
 // Macro # 6
 /$ 5 Me/Qth
-<MYNAME> <MYQTH> <MYST> <MYLOC>\n
+<MYNAME> <MYQTH> <MYST> <MYLOC> FHC#: 7976\n
 
 
 //
 // Macro # 7
 /$ 6 Brag
 \n
-<MYCALL> NAME IS <MYNAME> IC-7300 ON EFHW AT <TX_PWR>\n
+<MYCALL> NAME IS <MYNAME> IC-7300 @ <TX_PWR> ON <ANTENNA> \n
 \n
 
 

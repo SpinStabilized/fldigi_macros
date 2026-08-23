@@ -8,33 +8,33 @@
 
 //
 // Macro # 1
-/$ 0 Hell CQ @#-2+
+/$ 0 CQ @#-2+
 <TX>CQ CQ CQ DE <MYCALL> <MYCALL> <MYCALL> K\n
 <RX>\n
 <AFTER:20>
 
 //
 // Macro # 2
-/$ 1 Hell ANS @>|
+/$ 1 ANS @>|
 <TX>\n
 <CALL> <CALL> de <MYCALL> <MYCALL> <MYCALL> KN\n
 <RX>
 
 //
 // Macro # 3
-/$ 2 Hell QSO @>>
+/$ 2 QSO @>>
 <TX>\n
 <CALL> de <MYCALL> 
 
 //
 // Macro # 4
-/$ 3 Hell KN @||
+/$ 3 KN @||
 <CALL> DE <MYCALL> KN\n
 <RX>
 
 //
 // Macro # 5
-/$ 4 Hell SK @||
+/$ 4 SK @||
 TNX GL 73 73  <CALL> DE <MYCALL> SK\n
 <RX>
 
@@ -48,7 +48,7 @@ TNX GL 73 73  <CALL> DE <MYCALL> SK\n
 // Macro # 7
 /$ 6 Brag
 \n
-<MYCALL> NAME IS <MYNAME> IC-7300 ON EFHW\n
+<MYCALL> NAME IS <MYNAME> IC-7300 ON EFHW AT <TX_PWR>\n
 \n
 
 

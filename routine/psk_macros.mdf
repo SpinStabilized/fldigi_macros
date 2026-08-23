@@ -55,10 +55,9 @@ President of my work radio club, W3APL.\n
 // Macro # 7
 /$ 6 Brag
 Rig:  IC-7300\n
-Pwr:  50W\n
-Ant:  Spooltenna EFHW slanted at ~25ft\n
+Pwr:  <TX_PWR>\n
+Ant:  <ANTENNA>\n
 Comp: <VER> on MacOS\n
-
 
 //
 // Macro # 8

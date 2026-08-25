@@ -8,7 +8,7 @@
 
 //
 // Macro # 1
-/$ 0 CQ@#-2+
+/$ 0 CQ @#-2+
 <TX>\n
 CQ CQ CQ de <MYCALL> <MYCALL> pse k\n
 \n
@@ -47,9 +47,6 @@ Thanks for the QSO! 73 <CALL> de <MYCALL> sk\n
 // Macro # 6
 /$ 5 Me/Qth
 Name here is <MYNAME> in <MYQTH>, <MYST> at <MYLOC>\n
-Licensed since 2025, extra since 2026, and a Space Systems Engineer in my work life.\n
-President of my work radio club, W3APL.\n
-
 
 //
 // Macro # 7
@@ -90,21 +87,20 @@ de <MYCALL> k\n
 
 //
 // Macro # 13
-/$ 12 Signal Good
-I have a good copy: <INFO1> -- <INFO2>\n
+/$ 12 Signal Quality
+Signal Quality: <INFO1> -- <INFO2>\n
 
 
 //
 // Macro # 14
-/$ 13 Rough Copy
-I have an ok copy, loosing some characters: <INFO1> -- <INFO2>\n
+/$ 13 WX
+Weather Near QTH:\n
+<WX>
 
 
 //
 // Macro # 15
-/$ 14 WX
-Weather Near QTH:\n
-<wx>
+/$ 14 
 
 //
 // Macro # 16

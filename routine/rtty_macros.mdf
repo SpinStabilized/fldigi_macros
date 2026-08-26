@@ -1,24 +1,31 @@
 //fldigi macro definition file extended
-// This file defines the macro structure(s) for the digital modem program, fldigi
-// It also serves as a basis for any macros that are written by the user
+// =============================================================================
+// Author: Brian McLaughlin (N3BMC)
+// Creation Date: 2026-08-25
+// Description: Routine RTTY QSO Macros
 //
-// The top line of this file should always be the first line in every macro 
-// definition file (.mdf) for the fldigi program to recognize it as such.
-//
+// Revision History:
+// Date       Init  Description
+// -----------------------------------------------------------------------------
+// 2026-08-25 BMC   Header added to older file
+// =============================================================================
 
+// Row 1 -----------------------------------------------------------------------
 //
 // Macro # 1
 /$ 0 CQ@#-2+
 <TX><IDLE:1>\n
 CQ CQ CQ DE <MYCALL> <MYCALL> PSE K\n
-<RX><AFTER:20>
+<IDLE:0.5><RX><AFTER:20>
+
 
 //
 // Macro # 2
 /$ 1 ANS @>|
 <TX><IDLE:1>\n
 <CALL> <CALL> de <MYCALL> <MYCALL> KN\n
-<RX>
+<IDLE:0.5><RX>
+
 
 //
 // Macro # 3
@@ -33,13 +40,15 @@ CQ CQ CQ DE <MYCALL> <MYCALL> PSE K\n
 /$ 3 KN @||
 \n
 <CALL> DE <MYCALL> KN\n
-<RX>
+<IDLE:0.5><RX>
+
 
 //
 // Macro # 5
 /$ 4 SK @||
 TNX FOR QSO 73 73  <CALL> DE <MYCALL> SK\n
-<RX>
+<IDLE:0.5><RX>
+
 
 //
 // Macro # 6
@@ -51,7 +60,7 @@ TNX FOR QSO 73 73  <CALL> DE <MYCALL> SK\n
 // Macro # 7
 /$ 6 Brag
 \n
-RUNNING AN IC-7300 AT <TX_PWR>W ON AN <ANTENNA> W FLDIGI ON A MAC MINI\n
+RUNNING AN IC-7300 AT <TX_PWR>W ON AN <ANTENNA> /W FLDIGI ON A MAC MINI\n
 
 
 //
@@ -59,30 +68,33 @@ RUNNING AN IC-7300 AT <TX_PWR>W ON AN <ANTENNA> W FLDIGI ON A MAC MINI\n
 /$ 7 AGN? @>|
 <TX><IDLE:1>\n
 AGN? AGN?\n
-<RX>
+<IDLE:0.5><RX>
+
 
 //
 // Macro # 9
-/$ 8 T/R
-<TX/RX>
+/$ 8 
+
 
 //
 // Macro # 10
-/$ 9 Tx @>>
-<TX><IDLE:1>
+/$ 9 
+
 
 //
 // Macro # 11
-/$ 10 Rx @||
-<RX>
+/$ 10 Tx @>>
+<TX><IDLE:1>\n
+
 
 //
 // Macro # 12
-/$ 11 TX @>|
-<TX>\n
-DE <MYCALL> K\n
-<RX>
+/$ 11 Rx @||
+\n
+<IDLE:0.5><RX>
 
+
+// Row 2 -----------------------------------------------------------------------
 //
 // Macro # 13
 /$ 12 
@@ -143,6 +155,7 @@ DE <MYCALL> K\n
 /$ 23 
 
 
+// Row 3 -----------------------------------------------------------------------
 //
 // Macro # 25
 /$ 24 
@@ -219,6 +232,7 @@ DE <MYCALL> K\n
 <RXRSID:off>\n
 <TXRSID:off>
 
+// Row 4 -----------------------------------------------------------------------
 //
 // Macro # 37
 /$ 36 

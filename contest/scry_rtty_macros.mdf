@@ -200,11 +200,6 @@ AGN AGN?\n
 
 //
 // Macro # 33
-/$ 32 
-
-
-//
-// Macro # 33
 /$ 32 Feld Hell
 <MODEM:FELDHELL>\n
 <RIGMODE:USB-D>\n

@@ -45,7 +45,7 @@ CQ SCRY <MYCALL> TEST CQ\n
 /$ 4 QRT @>|
 <TX><IDLE:1>\n
 DE <MYCALL> QRT QRT DE <MYCALL> SK \n
-<IDLE:0.5>RX
+<IDLE:0.5><RX>
 
 //
 // Macro # 6
@@ -80,8 +80,8 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 //
 // Macro # 12
 /$ 11 Rx @||
-<IDLE:0.5>\n
-<RX>
+\n
+<IDLE:0.5><RX>
 
 // Row 2 -----------------------------------------------------------------------
 //

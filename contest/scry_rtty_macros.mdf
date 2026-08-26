@@ -65,25 +65,23 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 
 //
 // Macro # 9
-/$ 8 T/R
-<TX/RX>
+/$ 8 
 
 //
 // Macro # 10
-/$ 9 Tx @>>
-<TX><IDLE:1>
+/$ 9 
 
 //
 // Macro # 11
-/$ 10 Rx @||
-<IDLE:0.5><RX>
+/$ 10 Tx @>>
+<TX><IDLE:1>\n
+
 
 //
 // Macro # 12
-/$ 11 TX @>|
-<TX>\n
-<MYCALL> k\n
-<IDLE:0.5><RX>
+/$ 11 Rx @||
+<IDLE:0.5>\n
+<RX>
 
 // Row 2 -----------------------------------------------------------------------
 //

@@ -11,18 +11,19 @@
 // 2026-08-25 BMC  Original version for the 2026 SCRY RTTY Ops Contest
 // =============================================================================
 
+// Row 1 ----------------------------------------------------------------------- 
 //
 // Macro # 1
 /$ 0 CQ @#+
 <TX><IDLE:1>\n
-CQ SCRY <MYCALL> TEST\n
+CQ SCRY <MYCALL> TEST CQ\n
 <IDLE:0.5><RX><AFTER:15>
 
 //
 // Macro # 2
 /$ 1 Resp @>|
 <TX><IDLE:1>\n
-<CALL> <XBEG>599 2025<XEND> 2025 <MYCALL>\n
+<CALL> <XBEG>599 2025<XEND> 2025 <MYCALL> \n
 <IDLE:0.5><RX>
 
 //
@@ -41,12 +42,15 @@ CQ SCRY <MYCALL> TEST\n
 
 //
 // Macro # 5
-/$ 4 Log
-<LOG><CLRLOG>
+/$ 4 QRT @>|
+<TX><IDLE:1>\n
+DE <MYCALL> QRT QRT DE <MYCALL> SK \n
+<IDLE:0.5>RX
 
 //
 // Macro # 6
-/$ 5 
+/$ 5  Log
+<LOG><CLRLOG>
 
 
 //
@@ -81,18 +85,19 @@ CQ SCRY <MYCALL> TEST\n
 <MYCALL> k\n
 <IDLE:0.5><RX>
 
+// Row 2 -----------------------------------------------------------------------
 //
 // Macro # 13
 /$ 12 SP Hunt @>|
 <TX><IDLE:1>\n
-<MYCALL> <MYCALL>\n
+<MYCALL> <MYCALL> <MYCALL> K\n
 <IDLE:0.5><RX>
 
 //
 // Macro # 14
 /$ 13 SP Ans @>|
 <TX><IDLE:1>\n
-<CALL> <XBEG>599 2025<XEND> 2026 <MYCALL>\n
+<CALL> <XBEG>599 2025<XEND> 2025 <MYCALL> K \n
 <IDLE:0.5><RX>
 
 //
@@ -144,7 +149,7 @@ CQ SCRY <MYCALL> TEST\n
 // Macro # 24
 /$ 23 
 
-
+// Row 3 -----------------------------------------------------------------------
 //
 // Macro # 25
 /$ 24 AGN? @>|
@@ -234,6 +239,7 @@ AGN AGN?\n
 <RXRSID:off>\n
 <TXRSID:off>
 
+// Row 4 -----------------------------------------------------------------------
 //
 // Macro # 37
 /$ 36 Year? @>|

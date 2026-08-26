@@ -1,14 +1,14 @@
 //fldigi macro definition file extended
 // =============================================================================
-// Author: Brian McLaughlin
+// Author: Brian McLaughlin (N3BMC)
 // Creation Date: 2026-08-25
 // Description: Contest macros for the SCRY RTTY Ops Contest
 // Contest Rules: https://rttyops.com/index.php/contests/cq-rttyops-ww-scry-rtty/cq-rttyops-ww-scry2-rtty-rules
-// =============================================================================
+//
 // Revision History:
-// Date       Init          Description
+// Date       Init  Description
 // -----------------------------------------------------------------------------
-// 2026-08-25 BMC  Original version for the 2026 SCRY RTTY Ops Contest
+// 2026-08-25 BMC   Original version for the 2026 SCRY RTTY Ops Contest
 // =============================================================================
 
 // Row 1 ----------------------------------------------------------------------- 

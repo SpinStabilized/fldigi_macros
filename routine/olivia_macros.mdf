@@ -220,7 +220,7 @@ I have an ok copy, loosing some characters: <INFO1>\n
 //
 // Macro # 36
 /$ 35 RTTY
-<MODEM:RTTY>\n
+<MODEM:RTTY:170:45.45:5>\n
 <RIGMODE:USB-D>\n
 <MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>\n
 <RXRSID:off>\n

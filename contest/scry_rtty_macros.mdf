@@ -1,22 +1,16 @@
 //fldigi macro definition file extended
-// =============================================================================
-// Author: Brian McLaughlin (N3BMC)
-// Creation Date: 2026-08-25
-// Description: Contest macros for the SCRY RTTY Ops Contest
-// Contest Rules: https://rttyops.com/index.php/contests/cq-rttyops-ww-scry-rtty/cq-rttyops-ww-scry2-rtty-rules
+// This file defines the macro structure(s) for the digital modem program, fldigi
+// It also serves as a basis for any macros that are written by the user
 //
-// Revision History:
-// Date       Init  Description
-// -----------------------------------------------------------------------------
-// 2026-08-25 BMC   Original version for the 2026 SCRY RTTY Ops Contest
-// =============================================================================
+// The top line of this file should always be the first line in every macro 
+// definition file (.mdf) for the fldigi program to recognize it as such.
+//
 
-// Row 1 ----------------------------------------------------------------------- 
 //
 // Macro # 1
 /$ 0 CQ @#+
 <TX><IDLE:1>\n
-CQ SCRY <MYCALL> TEST CQ\n
+CQ SCRY TEST <MYCALL> <MYCALL> CQ PSE K\n
 <IDLE:0.5><RX><AFTER:15>
 
 //
@@ -30,7 +24,7 @@ CQ SCRY <MYCALL> TEST CQ\n
 // Macro # 3
 /$ 2 Run @>|
 <TX><IDLE:1>\n
-<CALL> TU <MYCALL> QRZ? \n
+<CALL> TU GL <MYCALL> QRZ? \n
 <IDLE:0.5><RX>
 
 //
@@ -52,7 +46,6 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 /$ 5  Log
 <LOG><CLRLOG>
 
-
 //
 // Macro # 7
 /$ 6 
@@ -67,9 +60,11 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 // Macro # 9
 /$ 8 
 
+
 //
 // Macro # 10
 /$ 9 
+
 
 //
 // Macro # 11
@@ -83,19 +78,18 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 \n
 <IDLE:0.5><RX>
 
-// Row 2 -----------------------------------------------------------------------
 //
 // Macro # 13
 /$ 12 SP Hunt @>|
 <TX><IDLE:1>\n
-<MYCALL> <MYCALL> <MYCALL> K\n
+<MYCALL> <MYCALL>\n
 <IDLE:0.5><RX>
 
 //
 // Macro # 14
 /$ 13 SP Ans @>|
 <TX><IDLE:1>\n
-<CALL> <XBEG>599 2025<XEND> 2025 <MYCALL> K \n
+<CALL> TU <XBEG>599 2025<XEND> 2025 <MYCALL> K \n
 <IDLE:0.5><RX>
 
 //
@@ -147,7 +141,7 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 // Macro # 24
 /$ 23 
 
-// Row 3 -----------------------------------------------------------------------
+
 //
 // Macro # 25
 /$ 24 AGN? @>|
@@ -232,14 +226,12 @@ AGN AGN?\n
 <RXRSID:off>\n
 <TXRSID:off>
 
-// Row 4 -----------------------------------------------------------------------
 //
 // Macro # 37
 /$ 36 Year? @>|
 <TX><IDLE:1>\n
 YEAR YEAR?\n
 <IDLE:0.5><RX>
-
 
 //
 // Macro # 38

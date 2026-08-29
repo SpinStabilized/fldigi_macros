@@ -11,22 +11,22 @@
 //
 // Macro # 1
 /$ 0 CQ @#+
-<TX>CQ CQ CQ TEST DE <MYCALL> <MYCALL> <MYCALL> PSE K<RX><AFTER:30>
+<TX>CQ CQ CQ FH TEST DE <MYCALL> <MYCALL> PSE K<RX><AFTER:30>
 
 //
 // Macro # 2
 /$ 1 Exch @>|
-<TX><CALL> DE <MYCALL> FH7976 MD FM19 <MYCALL> K<RX>
+<TX><CALL> <XBEG>#7976 MD FM19<XEND> de <MYCALL> KN<RX>
 
 //
 // Macro # 3
 /$ 2 Run @>|
-<TX><CALL> TU <MYCALL> QRZ? K<RX>
+<TX> <CALL> TU <MYCALL> QRZ? K <RX>
 
 //
 // Macro # 4
 /$ 3 Stop @>|
-<TX><CALL> TU <MYCALL> SK<RX>
+<TX> <CALL> TU <MYCALL> <RX>
 
 //
 // Macro # 5
@@ -68,12 +68,12 @@
 //
 // Macro # 13
 /$ 12 SP Hunt @>|
-<TX><CALL> DE <MYCALL> K<RX>
+<TX><CALL> DE <MYCALL> <MYCALL> <RX>
 
 //
 // Macro # 14
 /$ 13 SP Ans @>|
-<TX><CALL> FH7976 MD FM19 <MYCALL> K<RX>
+<TX><CALL> #7976 #7976 MD MD FM19 FM19 de <MYCALL> KN<RX>
 
 //
 // Macro # 15
@@ -82,15 +82,18 @@
 
 //
 // Macro # 16
-/$ 15 
+/$ 15 My FH# @>|
+<TX><CALL> #7976 #7976 de <MYCALL><RX>
 
 //
 // Macro # 17
-/$ 16 
+/$ 16 My QTH @>|
+<TX><CALL> MD MD de <MYCALL><RX>
 
 //
 // Macro # 18
-/$ 17 
+/$ 17 My Grid @>|
+<TX><CALL> FM19 FM19 de <MYCALL><RX>
 
 //
 // Macro # 19
@@ -124,27 +127,27 @@
 
 //
 // Macro # 26
-/$ 25 Full Rpt @>|
-<TX><CALL> FH7976 MD FM19<RX>
+/$ 25 
 
 //
 // Macro # 27
-/$ 26 FH# Rpt @>|
-<TX><CALL> FH7976 FH7976<RX>
+/$ 26 Call AGN? @>|
+<TX><CALL> CALL AGN? de <MYCALL><RX>
 
 //
 // Macro # 28
-/$ 27 Grid Rpt @>|
-<TX><CALL> FM19 FM19<RX>
+/$ 27 FH# AGN? @>|
+<TX><CALL> FH AGN? de <MYCALL><RX>
 
 //
 // Macro # 29
-/$ 28 State Rpt @>|
-<TX><CALL> MD MD<RX>
+/$ 28 QTH AGN? @>|
+<TX><CALL> QTH AGN? de <MYCALL><RX>
 
 //
 // Macro # 30
-/$ 29 
+/$ 29 Grid AGN? @>|
+<TX><CALL> GRID AGN? de <MYCALL><RX>
 
 //
 // Macro # 31
@@ -159,7 +162,6 @@
 /$ 32 Feld Hell
 <MODEM:FELDHELL>\n
 <RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>\n
 <RXRSID:off>\n
 <TXRSID:off>
 
@@ -193,23 +195,31 @@
 // Row 4 - Utility -------------------------------------------------------------
 //
 // Macro # 37
-/$ 36 
+/$ 36 QSO @>>
+<TX>\n
+<CALL> de <MYCALL> 
 
 //
 // Macro # 38
-/$ 37 
+/$ 37 KN @||
+<CALL> DE <MYCALL> KN
+<RX>
 
 //
 // Macro # 39
-/$ 38 
+/$ 38 SK @||
+TNX GL 73 73  <CALL> DE <MYCALL> SK
+<RX>
 
 //
 // Macro # 40
-/$ 39 
+/$ 39 Me/Qth
+<MYNAME> <MYQTH> <MYST> <MYLOC> #7976
 
 //
 // Macro # 41
-/$ 40 
+/$ 40 Brag
+<MYCALL> NAME IS <MYNAME> IC-7300 @ <TX_PWR> ON <ANTENNA>
 
 //
 // Macro # 42

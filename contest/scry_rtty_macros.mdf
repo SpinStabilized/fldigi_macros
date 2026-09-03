@@ -11,35 +11,35 @@
 /$ 0 CQ @#+
 <TX><IDLE:1>\n
 CQ SCRY TEST <MYCALL> <MYCALL> CQ PSE K\n
-<IDLE:0.5><RX><AFTER:15>
+<IDLE:1.0><RX><AFTER:15>
 
 //
 // Macro # 2
 /$ 1 Resp @>|
 <TX><IDLE:1>\n
-<CALL> <XBEG>599 2025<XEND> 2025 <MYCALL> \n
-<IDLE:0.5><RX>
+<CALL> 599 <XBEG>2025<XEND> 2025 <MYCALL>\n
+<IDLE:1.0><RX>
 
 //
 // Macro # 3
 /$ 2 Run @>|
 <TX><IDLE:1>\n
-<CALL> TU GL <MYCALL> QRZ? \n
-<IDLE:0.5><RX>
+<CALL> TU GL <MYCALL> QRZ?\n
+<IDLE:1.0><RX>
 
 //
 // Macro # 4
 /$ 3 Stop @>|
 <TX><IDLE:1>\n
 <CALL> TU <MYCALL>\n
-<IDLE:0.5><RX>
+<IDLE:1.0><RX>
 
 //
 // Macro # 5
 /$ 4 QRT @>|
 <TX><IDLE:1>\n
-DE <MYCALL> QRT QRT DE <MYCALL> SK \n
-<IDLE:0.5><RX>
+DE <MYCALL> QRT QRT DE <MYCALL> SK\n
+<IDLE:1.0><RX>
 
 //
 // Macro # 6
@@ -76,21 +76,21 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 // Macro # 12
 /$ 11 Rx @||
 \n
-<IDLE:0.5><RX>
+<IDLE:1.0><RX>
 
 //
 // Macro # 13
 /$ 12 SP Hunt @>|
 <TX><IDLE:1>\n
 <MYCALL> <MYCALL>\n
-<IDLE:0.5><RX>
+<IDLE:1.0><RX>
 
 //
 // Macro # 14
 /$ 13 SP Ans @>|
 <TX><IDLE:1>\n
-<CALL> TU <XBEG>599 2025<XEND> 2025 <MYCALL> K \n
-<IDLE:0.5><RX>
+<CALL> TU 599 <XBEG>2025<XEND> 2025 <MYCALL> K\n
+<IDLE:1.0><RX>
 
 //
 // Macro # 15
@@ -147,28 +147,28 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 /$ 24 AGN? @>|
 <TX><IDLE:1>\n
 AGN AGN?\n
-<IDLE:0.5><RX>
+<IDLE:1.0><RX>
 
 //
 // Macro # 26
 /$ 25 Full Repeat @>|
 <TX><IDLE:1>\n
 <CALL> 599 599 2025 2025 <MYCALL>\n
-<IDLE:0.5><RX>
+<IDLE:1.0><RX>
 
 //
 // Macro # 27
 /$ 26 RST Repeat @>|
 <TX><IDLE:1>\n
 <CALL> 599 599 <MYCALL>\n
-<IDLE:0.5><RX>
+<IDLE:1.0><RX>
 
 //
 // Macro # 28
 /$ 27 Year Repeat @>|
 <TX><IDLE:1>\n
 <CALL> 2025 2025 <MYCALL>\n
-<IDLE:0.5><RX>
+<IDLE:1.0><RX>
 
 //
 // Macro # 29
@@ -231,7 +231,7 @@ AGN AGN?\n
 /$ 36 Year? @>|
 <TX><IDLE:1>\n
 YEAR YEAR?\n
-<IDLE:0.5><RX>
+<IDLE:1.0><RX>
 
 //
 // Macro # 38

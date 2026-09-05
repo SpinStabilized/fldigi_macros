@@ -231,11 +231,12 @@ TNX GL 73 73  <CALL> DE <MYCALL> SK
 
 //
 // Macro # 44
-/$ 43 
+/$ 43 To ClubLog
+<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_cl.py</EXEC>
 
 //
 // Macro # 45
-/$ 44 Entry to QRZ
+/$ 44 To QRZ
 <EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_qrz.py</EXEC>
 
 //

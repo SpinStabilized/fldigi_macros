@@ -263,14 +263,13 @@ I have an ok copy, loosing some characters: <INFO1>\n
 
 //
 // Macro # 44
-/$ 43 
-
+/$ 43 To ClubLog
+<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_cl.py</EXEC>
 
 //
 // Macro # 45
-/$ 44 Entry To QRZ
+/$ 44 To QRZ
 <EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_qrz.py</EXEC>
-
 //
 // Macro # 46
 /$ 45 CLR Tx

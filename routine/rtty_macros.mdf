@@ -262,15 +262,14 @@ AGN? AGN?\n
 // Macro # 42
 /$ 41 
 
-
 //
 // Macro # 43
-/$ 42 
-
+/$ 42 To ClubLog
+<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_cl.py</EXEC>
 
 //
 // Macro # 44
-/$ 43 Entry To QRZ
+/$ 43 To QRZ
 <EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_qrz.py</EXEC>
 
 //

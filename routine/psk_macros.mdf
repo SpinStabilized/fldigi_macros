@@ -95,8 +95,7 @@ Signal Quality: <INFO1> -- <INFO2>\n
 //
 // Macro # 14
 /$ 13 WX
-Weather Near QTH:\n
-<WX>
+<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python local_wx.py</EXEC>
 
 
 //

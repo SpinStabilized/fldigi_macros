@@ -52,10 +52,11 @@ Name here is <MYNAME> in <MYQTH>, <MYST> at <MYLOC>\n
 //
 // Macro # 7
 /$ 6 Brag
-Rig:  IC-7300\n
-Pwr:  <TX_PWR>\n
-Ant:  <ANTENNA>\n
-Comp: <VER> on MacOS\n
+Rig: IC-7300\n
+Pwr: <TX_PWR>W\n
+Ant: <ANTENNA>\n
+Cmp: M4 MacMini\n
+Sw : <VER>\n
 
 //
 // Macro # 8

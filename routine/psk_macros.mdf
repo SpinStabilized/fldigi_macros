@@ -95,7 +95,7 @@ Signal Quality: <INFO1> -- <INFO2>\n
 //
 // Macro # 14
 /$ 13 WX
-<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python local_wx.py</EXEC>
+<EXEC>fltools wx</EXEC>
 
 
 //
@@ -261,12 +261,12 @@ Signal Quality: <INFO1> -- <INFO2>\n
 //
 // Macro # 44
 /$ 43 To ClubLog
-<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_cl.py</EXEC>
+<EXEC>fltools clublog</EXEC>
 
 //
 // Macro # 45
 /$ 44 To QRZ
-<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_qrz.py</EXEC>
+<EXEC>fltools qrz</EXEC>
 //
 // Macro # 46
 /$ 45 CLR Tx

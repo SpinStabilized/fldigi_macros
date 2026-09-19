@@ -48,7 +48,7 @@ TNX GL 73 73  <CALL> DE <MYCALL> SK\n
 // Macro # 7
 /$ 6 Brag
 \n
-<MYCALL> NAME IS <MYNAME> IC-7300 @ <TX_PWR> ON <ANTENNA> \n
+Rig: IC-7300 @ <TX_PWR> ON <ANTENNA> \n
 \n
 
 
@@ -252,12 +252,12 @@ de <MYCALL> k\n
 //
 // Macro # 44
 /$ 43 To ClubLog
-<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_cl.py</EXEC>
+<EXEC>fltools clublog</EXEC>
 
 //
 // Macro # 45
 /$ 44 To QRZ
-<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_qrz.py</EXEC>
+<EXEC>fltools qrz</EXEC>
 
 //
 // Macro # 46

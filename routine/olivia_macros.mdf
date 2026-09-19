@@ -54,7 +54,11 @@ Name here is <MYNAME> in <MYQTH>, <MYST> at <MYLOC>\n
 // Macro # 7
 /$ 6 Brag
 \n
-I am running with an ic-7300 at <TX_PWR>W on an <ANTENNA> running on a mac mini m4 with <VER>\n
+Rig: IC-7300\n
+Pwr: <TX_PWR>W\n
+Ant: <ANTENNA>\n
+Cmp: M4 MacMini\n
+Sw : <VER>\n
 \n
 
 
@@ -101,7 +105,8 @@ I have an ok copy, loosing some characters: <INFO1>\n
 
 //
 // Macro # 15
-/$ 14 
+/$ 14 WX 
+<EXEC>fltools wx</EXEC>\n
 
 
 //
@@ -263,12 +268,12 @@ I have an ok copy, loosing some characters: <INFO1>\n
 //
 // Macro # 44
 /$ 43 To ClubLog
-<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_cl.py</EXEC>
+<EXEC>fltools clublog</EXEC>
 
 //
 // Macro # 45
 /$ 44 To QRZ
-<EXEC>/opt/homebrew/bin/uv run --directory $HOME/source/fldigi_to_qrz/ python fldigi_to_qrz.py</EXEC>
+<EXEC>fltools qrz</EXEC>
 //
 // Macro # 46
 /$ 45 CLR Tx

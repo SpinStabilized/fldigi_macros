@@ -11,28 +11,28 @@
 /$ 0 CQ @#+
 <TX><IDLE:1>\n
 CQ NAQP <MYCALL> <MYCALL> CQ \n
-<IDLE:1><RX><AFTER:15>
+<RX><AFTER:15>
 
 //
 // Macro # 2
 /$ 1 Resp @>|
 <TX><IDLE:1>\n
 <CALL> <MYNAME> MD DE <MYCALL>\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 3
 /$ 2 Run @>|
 <TX><IDLE:1>\n
 <CALL> TU DE <MYCALL> QRZ? \n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 4
 /$ 3 Stop @>|
 <TX><IDLE:1>\n
 <CALL> TU DE <MYCALL>\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 5
@@ -67,28 +67,28 @@ CQ NAQP <MYCALL> <MYCALL> CQ \n
 //
 // Macro # 11
 /$ 10 Rx @||
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 12
 /$ 11 TX @>|
 <TX>\n
 de <MYCALL> k\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 13
 /$ 12 SP Hunt @>|
 <TX><IDLE:1>\n
 <MYCALL> <MYCALL>\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 14
 /$ 13 SP Ans @>|
 <TX><IDLE:1>\n
 TU <MYNAME> MD de <MYCALL>\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 15
@@ -145,14 +145,14 @@ TU <MYNAME> MD de <MYCALL>\n
 /$ 24 AGN? @>|
 <TX><IDLE:1>\n
 AGN? AGN?\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 26
 /$ 25 RPT
 <TX><IDLE:1>\n
 BRIAN BRIAN MD MD\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 27

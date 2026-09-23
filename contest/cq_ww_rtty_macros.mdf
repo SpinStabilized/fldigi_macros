@@ -18,37 +18,37 @@
 //
 // Macro # 1
 /$ 0 CQ @#+
-<TX><IDLE:1>\n
-CQ CQWW TEST <MYCALL> <MYCALL> CQ\n
-<IDLE:1.0><RX><AFTER:15>
+<TX><IDLE:1>
+CQ CQWW TEST <MYCALL> <MYCALL> CQ \n
+<RX><AFTER:15>
 
 //
 // Macro # 2
 /$ 1 Resp @>|
-<TX><IDLE:1>\n
-<CALL> <XBEG>599 05 MD<XEND> 599 05 MD <MYCALL>\n
-<IDLE:1.0><RX>
+<TX><IDLE:1>
+<CALL> <XBEG>599 05 MD<XEND> 599 05 MD <MYCALL> \n
+<RX>
 
 //
 // Macro # 3
 /$ 2 Run @>|
-<TX><IDLE:1>\n
-<CALL> TU GL <MYCALL> QRZ?\n
-<IDLE:1.0><RX>
+<TX><IDLE:1>
+<CALL> TU GL <MYCALL> CQ CQ\n
+<RX>
 
 //
 // Macro # 4
 /$ 3 Stop @>|
-<TX><IDLE:1>\n
+<TX><IDLE:1>
 <CALL> TU <MYCALL>\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 5
 /$ 4 QRT @>|
-<TX><IDLE:1>\n
-DE <MYCALL> QRT QRT DE <MYCALL> SK\n
-<IDLE:1.0><RX>
+<TX><IDLE:1>
+DE <MYCALL> QRT QRT DE <MYCALL> SK \n
+<RX>
 
 //
 // Macro # 6
@@ -78,29 +78,28 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK\n
 //
 // Macro # 11
 /$ 10 Tx @>>
-<TX><IDLE:1>\n
+<TX><IDLE:1>
 
 
 //
 // Macro # 12
 /$ 11 Rx @||
-\n
-<IDLE:1.0><RX>
+<RX>
 
 // Row 2 -----------------------------------------------------------------------
 //
 // Macro # 13
 /$ 12 SP Hunt @>|
-<TX><IDLE:1>\n
-<MYCALL> <MYCALL>\n
-<IDLE:1.0><RX>
+<TX><IDLE:1>
+<MYCALL> <MYCALL> \n
+<RX>
 
 //
 // Macro # 14
 /$ 13 SP Ans @>|
-<TX><IDLE:1>\n
-<CALL> TU <XBEG>599 05 MD<XEND> 599 05 MD <MYCALL> K\n
-<IDLE:1.0><RX>
+<TX><IDLE:1>
+<CALL> TU <XBEG>599 05 MD<XEND> 599 05 MD <MYCALL> K \n
+<RX>
 
 //
 // Macro # 15
@@ -155,30 +154,30 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK\n
 //
 // Macro # 25
 /$ 24 Full Repeat @>|
-<TX><IDLE:1>\n
-<CALL> 599 599 05 05 MD MD <MYCALL>\n
-<IDLE:1.0><RX>
+<TX><IDLE:1>
+<CALL> 599 599 05 05 MD MD <MYCALL> \n
+<RX>
 
 //
 // Macro # 26
 /$ 25 RST Repeat @>|
-<TX><IDLE:1>\n
-<CALL> 599 599 <MYCALL>\n
-<IDLE:1.0><RX>
+<TX><IDLE:1>
+<CALL> 599 599 <MYCALL> \n
+<RX>
 
 //
 // Macro # 27
 /$ 26 CQZ Repeat @>|
-<TX><IDLE:1>\n
-<CALL> 05 05 <MYCALL>\n
-<IDLE:1.0><RX>
+<TX><IDLE:1>
+<CALL> 05 05 <MYCALL> \n
+<RX>
 
 //
 // Macro # 28
 /$ 27 QTH Repeat @>|
 <TX><IDLE:1>\n
 <CALL> MD MD <MYCALL>\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 29
@@ -203,69 +202,65 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK\n
 //
 // Macro # 33
 /$ 32 Feld Hell
-<MODEM:FELDHELL>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:FELDHELL>
+<RIGMODE:USB-D>
+<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>
+<RXRSID:off>
 <TXRSID:off>
 
 //
 // Macro # 34
 /$ 33 Olivia 8-250
-<MODEM:OLIVIA:250:8>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>\n
-<RXRSID:on>\n
+<MODEM:OLIVIA:250:8>
+<RIGMODE:USB-D>
+<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>
+<RXRSID:on>
 <TXRSID:on>
 
 //
 // Macro # 35
 /$ 34 PSK
-<MODEM:BPSK31>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:BPSK31>
+<RIGMODE:USB-D>
+<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>
+<RXRSID:off>
 <TXRSID:off>
 
 //
 // Macro # 36
 /$ 35 RTTY
-<MODEM:RTTY:170:45.45:5>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:RTTY:170:45.45:5>
+<RIGMODE:RTTY>
+<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
+<RXRSID:off>
 <TXRSID:off>
 
 // Row 4 -----------------------------------------------------------------------
 //
 // Macro # 37
 /$ 36 AGN? @>|
-<TX><IDLE:1>\n
-AGN AGN?\n
-<IDLE:1.0><RX>
+<TX><IDLE:1> AGN AGN? \n
+<RX>
 
 //
 // Macro # 38
 /$ 37 RST? @>|
-<TX><IDLE:1>\n
-RST RST?\n
-<IDLE:1.0><RX>
+<TX><IDLE:1> RST RST? \n
+<RX>
 
 
 //
 // Macro # 39
 /$ 38 CQZ? @>|
-<TX><IDLE:1>\n
-CQZ CQZ?\n
-<IDLE:1.0><RX>
+<TX><IDLE:1> CQZ CQZ? \n
+<RX>
 
 
 //
 // Macro # 40
 /$ 39 QTH? @>|
-<TX><IDLE:1>\n
-QTH QTH?\n
-<IDLE:1.0><RX>
+<TX><IDLE:1> QTH QTH? \n
+<RX>
 
 
 //

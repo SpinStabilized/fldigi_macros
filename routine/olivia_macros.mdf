@@ -11,31 +11,26 @@
 /$ 0 CQ@#-2+
 <TX>\n
 CQ CQ CQ de <MYCALL> <MYCALL>\n
-CQ CQ CQ de <MYCALL> <MYCALL> pse k\n
-\n
+CQ CQ CQ de <MYCALL> <MYCALL> pse k  \n
 <RX><AFTER:60>
 
 //
 // Macro # 2
 /$ 1 ANS @>|
-<TX>\n
-<CALL> <CALL> de <MYCALL> <MYCALL> kn\n
+<TX><CALL> <CALL> de <MYCALL> <MYCALL> kn\n
 <RX>
 
 //
 // Macro # 3
 /$ 2 QSO @>>
-<TX>\n
-<CALL> de <MYCALL>\n
-\n
+<TX><CALL> de <MYCALL>\n
 
 
 //
 // Macro # 4
 /$ 3 KN @||
-\n
 btu <CALL> de <MYCALL> kn\n
-<RX>\n
+<RX>
 
 
 //
@@ -47,7 +42,7 @@ btu <CALL> de <MYCALL> kn\n
 //
 // Macro # 6
 /$ 5 Me/Qth
-Name here is <MYNAME> in <MYQTH>, <MYST> at <MYLOC>\n
+Name here is <MYNAME> in <MYQTH>, <MYST> at <MYLOC>. \n
 
 
 //
@@ -59,14 +54,12 @@ Pwr: <TX_PWR>W\n
 Ant: <ANTENNA>\n
 Cmp: M4 MacMini\n
 Sw : <VER>\n
-\n
 
 
 //
 // Macro # 8
 /$ 7 AGN? @>|
-<TX>\n
-AGN? AGN?\n
+<TX>AGN? AGN?\n
 <RX>
 
 //
@@ -77,7 +70,7 @@ AGN? AGN?\n
 //
 // Macro # 10
 /$ 9 Tx @>>
-<TX><IDLE:1>
+<TX>
 
 //
 // Macro # 11
@@ -87,8 +80,7 @@ AGN? AGN?\n
 //
 // Macro # 12
 /$ 11 TX @>|
-<TX>\n
-de <MYCALL> k\n
+<TX> <CALL> de <MYCALL> k\n
 <RX>
 
 //
@@ -197,38 +189,42 @@ I have an ok copy, loosing some characters: <INFO1>\n
 //
 // Macro # 33
 /$ 32 Feld Hell
-<MODEM:FELDHELL>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:FELDHELL>
+<RIGMODE:USB-D>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>
+
 
 //
 // Macro # 34
 /$ 33 Olivia 8-250
-<MODEM:OLIVIA:250:8>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>\n
-<RXRSID:on>\n
+<MODEM:OLIVIA:250:8>
+<RIGMODE:USB-D>
+<RXRSID:on>
 <TXRSID:on>
+<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>
+
 
 //
 // Macro # 35
 /$ 34 PSK
-<MODEM:BPSK31>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:BPSK31>
+<RIGMODE:USB-D>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>
+
 
 //
 // Macro # 36
 /$ 35 RTTY
-<MODEM:RTTY:170:45.45:5>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:RTTY:170:45.45:5>
+<RIGMODE:RTTY>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
+
 
 //
 // Macro # 37

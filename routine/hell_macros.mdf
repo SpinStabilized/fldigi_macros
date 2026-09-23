@@ -9,47 +9,40 @@
 //
 // Macro # 1
 /$ 0 CQ @#-2+
-<TX>CQ CQ CQ DE <MYCALL> <MYCALL> <MYCALL> K\n
-<RX>\n
-<AFTER:20>
+<TX>CQ CQ CQ DE <MYCALL> <MYCALL> <MYCALL> K 
+<RX><AFTER:20>
 
 //
 // Macro # 2
 /$ 1 ANS @>|
-<TX>\n
-<CALL> <CALL> de <MYCALL> <MYCALL> <MYCALL> KN\n
+<TX><CALL> <CALL> de <MYCALL> <MYCALL> <MYCALL> KN 
 <RX>
 
 //
 // Macro # 3
 /$ 2 QSO @>>
-<TX>\n
-<CALL> de <MYCALL> 
+<TX><CALL> de <MYCALL> 
 
 //
 // Macro # 4
 /$ 3 KN @||
-<CALL> DE <MYCALL> KN\n
-<RX>
+<CALL> DE <MYCALL> KN <RX>
 
 //
 // Macro # 5
 /$ 4 SK @||
-TNX GL 73 73  <CALL> DE <MYCALL> SK\n
-<RX>
+TNX GL 73 73  <CALL> DE <MYCALL> SK <RX>
 
 //
 // Macro # 6
 /$ 5 Me/Qth
-<MYNAME> <MYQTH> <MYST> <MYLOC> #7976\n
+<MYNAME> <MYQTH> <MYST> <MYLOC> FH#7976
 
 
 //
 // Macro # 7
 /$ 6 Brag
-\n
-Rig: IC-7300 @ <TX_PWR> ON <ANTENNA> \n
-\n
+Rig: IC-7300 @ <TX_PWR> ON <ANTENNA> 
 
 
 //
@@ -65,7 +58,7 @@ Rig: IC-7300 @ <TX_PWR> ON <ANTENNA> \n
 //
 // Macro # 10
 /$ 9 Tx @>>
-<TX><IDLE:1>
+<TX>
 
 //
 // Macro # 11
@@ -75,9 +68,7 @@ Rig: IC-7300 @ <TX_PWR> ON <ANTENNA> \n
 //
 // Macro # 12
 /$ 11 TX @>|
-<TX>\n
-de <MYCALL> k\n
-<RX>
+<TX> de <MYCALL> k <RX>
 
 //
 // Macro # 13
@@ -181,38 +172,42 @@ de <MYCALL> k\n
 //
 // Macro # 33
 /$ 32 Feld Hell
-<MODEM:FELDHELL>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:FELDHELL>
+<RIGMODE:USB-D>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>
+
 
 //
 // Macro # 34
 /$ 33 Olivia 8-250
-<MODEM:OLIVIA:250:8>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>\n
-<RXRSID:on>\n
+<MODEM:OLIVIA:250:8>
+<RIGMODE:USB-D>
+<RXRSID:on>
 <TXRSID:on>
+<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>
+
 
 //
 // Macro # 35
 /$ 34 PSK
-<MODEM:BPSK31>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:BPSK31>
+<RIGMODE:USB-D>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>
+
 
 //
 // Macro # 36
 /$ 35 RTTY
-<MODEM:RTTY:170:45.45:5>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:RTTY:170:45.45:5>
+<RIGMODE:RTTY>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
+
 
 //
 // Macro # 37
@@ -246,8 +241,8 @@ de <MYCALL> k\n
 
 //
 // Macro # 43
-/$ 42 
-
+/$ 42 WX
+<EXEC>fltools wx</EXEC>
 
 //
 // Macro # 44

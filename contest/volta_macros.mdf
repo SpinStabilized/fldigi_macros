@@ -166,14 +166,14 @@ AGN? AGN?\n
 /$ 25 CQ TU
 <TX><IDLE:1>\n
 <CALL> TU GL 73 DE <MYCALL>\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 27
 /$ 26 Rep @>|
 <TX><IDLE:1>\n
 <CALL> UR <RST> <RST> <CNTR> <CNTR> DE <MYCALL> KN\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 28

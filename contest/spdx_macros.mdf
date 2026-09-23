@@ -90,28 +90,28 @@ de <MYCALL> k\n
 /$ 12 CQ ARIDX
 <TX><IDLE:1>\n
 CQ CQ CQ ARIDX TEST DE <MYCALL> <MYCALL> K\n
-<IDLE:1><RX><AFTER:20>
+<RX><AFTER:20>
 
 //
 // Macro # 14
 /$ 13 CQ ANSWER
 <TX><IDLE:1>\n
 <CALL> <RST> <RST> <CNTR> <CNTR>  DE <MYCALL> KN\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 15
 /$ 14 C Ans @>|
 <TX><IDLE:1>\n
 <MYCALL> <MYCALL> \n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 16
 /$ 15 C Rep @>|
 <TX><IDLE:1>\n
 <CALL> RR <RST> <RST> <CNTR> <CNTR> GL 73 DE <MYCALL> K\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 17
@@ -166,14 +166,14 @@ AGN? AGN?\n
 /$ 25 CQ TU
 <TX><IDLE:1>\n
 <CALL> TU GL 73 DE <MYCALL>\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 27
 /$ 26 Rep @>|
 <TX><IDLE:1>\n
 <CALL> UR <RST> <RST> <CNTR> <CNTR> DE <MYCALL> KN\n
-<IDLE:1><RX>
+<RX>
 
 //
 // Macro # 28

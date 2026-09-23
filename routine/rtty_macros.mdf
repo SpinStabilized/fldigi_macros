@@ -8,67 +8,69 @@
 // Date       Init  Description
 // -----------------------------------------------------------------------------
 // 2026-08-25 BMC   Header added to older file
+// 2026-09-23 BMC   Fixed major problem that has been plaguing me! Macros don't
+//                  like an <IDLE:n> tag if you don't have a <TX> as well. I
+//                  was adding <IDLE:n> with some of my end macros to keep the
+//                  modem sync up. Bad idea! Fixed and now FSK is working great
+//                  for me too.
 // =============================================================================
 
 // Row 1 -----------------------------------------------------------------------
 //
 // Macro # 1
 /$ 0 CQ@#-2+
-<TX><IDLE:1>\n
+<TX><IDLE:1>
 CQ CQ CQ DE <MYCALL> <MYCALL> PSE K\n
-<IDLE:0.5><RX><AFTER:20>
+<RX><AFTER:20>
 
 
 //
 // Macro # 2
 /$ 1 ANS @>|
-<TX><IDLE:1>\n
+<TX><IDLE:1>
 <CALL> <CALL> de <MYCALL> <MYCALL> KN\n
-<IDLE:0.5><RX>
+<RX>
 
 
 //
 // Macro # 3
 /$ 2 QSO @>>
-<TX><IDLE:1>\n
-\n
-<CALL> DE <MYCALL> \n
+<TX><IDLE:1>
+<CALL> DE <MYCALL> 
 
 
 //
 // Macro # 4
-/$ 3 KN @||
-\n
-<CALL> DE <MYCALL> KN\n
-<IDLE:0.5><RX>
+/$ 3 KN @|| 
+<CALL> DE <MYCALL> KN
+<RX>
 
 
 //
 // Macro # 5
-/$ 4 SK @||
-TNX FOR QSO 73 73  <CALL> DE <MYCALL> SK\n
-<IDLE:0.5><RX>
+/$ 4 SK @|| 
+TNX FOR QSO 73 73  <CALL> DE <MYCALL> SK   \n
+<RX>
 
 
 //
 // Macro # 6
-/$ 5 Me/Qth
-<MYNAME> <MYQTH> <MYST> <MYLOC>\n
+/$ 5 Me/Qth 
+<MYNAME> <MYQTH> <MYST> <MYLOC> \n
 
 
 //
 // Macro # 7
 /$ 6 Brag
-\n
-RUNNING AN IC-7300 AT <TX_PWR>W ON AN <ANTENNA> /W FLDIGI ON A MAC MINI\n
+RUNNING AN IC-7300 AT <TX_PWR>W ON A <ANTENNA> /W FLDIGI ON A MAC MINI\n
 
 
 //
 // Macro # 8
 /$ 7 AGN? @>|
-<TX><IDLE:1>\n
+<TX><IDLE:1>
 AGN? AGN?\n
-<IDLE:0.5><RX>
+<RX>
 
 
 //
@@ -84,14 +86,13 @@ AGN? AGN?\n
 //
 // Macro # 11
 /$ 10 Tx @>>
-<TX><IDLE:1>\n
+<TX><IDLE:1>
 
 
 //
 // Macro # 12
 /$ 11 Rx @||
-\n
-<IDLE:0.5><RX>
+<RX>
 
 
 // Row 2 -----------------------------------------------------------------------
@@ -199,38 +200,42 @@ AGN? AGN?\n
 //
 // Macro # 33
 /$ 32 Feld Hell
-<MODEM:FELDHELL>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:FELDHELL>
+<RIGMODE:USB-D>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>
+
 
 //
 // Macro # 34
 /$ 33 Olivia 8-250
-<MODEM:OLIVIA:250:8>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>\n
-<RXRSID:on>\n
+<MODEM:OLIVIA:250:8>
+<RIGMODE:USB-D>
+<RXRSID:on>
 <TXRSID:on>
+<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>
+
 
 //
 // Macro # 35
 /$ 34 PSK
-<MODEM:BPSK31>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:BPSK31>
+<RIGMODE:USB-D>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>
+
 
 //
 // Macro # 36
 /$ 35 RTTY
-<MODEM:RTTY:170:45.45:5>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:RTTY:170:45.45:5>
+<RIGMODE:RTTY>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
+
 
 // Row 4 -----------------------------------------------------------------------
 //
@@ -260,7 +265,9 @@ AGN? AGN?\n
 
 //
 // Macro # 42
-/$ 41 
+/$ 41 WX 
+<EXEC>fltools wx</EXEC>
+
 
 //
 // Macro # 43

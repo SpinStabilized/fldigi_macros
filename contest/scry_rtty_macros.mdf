@@ -11,35 +11,35 @@
 /$ 0 CQ @#+
 <TX><IDLE:1>\n
 CQ SCRY TEST <MYCALL> <MYCALL> CQ PSE K\n
-<IDLE:1.0><RX><AFTER:15>
+<RX><AFTER:15>
 
 //
 // Macro # 2
 /$ 1 Resp @>|
 <TX><IDLE:1>\n
 <CALL> 599 <XBEG>2025<XEND> 2025 <MYCALL>\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 3
 /$ 2 Run @>|
 <TX><IDLE:1>\n
 <CALL> TU GL <MYCALL> QRZ?\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 4
 /$ 3 Stop @>|
 <TX><IDLE:1>\n
 <CALL> TU <MYCALL>\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 5
 /$ 4 QRT @>|
 <TX><IDLE:1>\n
 DE <MYCALL> QRT QRT DE <MYCALL> SK\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 6
@@ -76,21 +76,21 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK\n
 // Macro # 12
 /$ 11 Rx @||
 \n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 13
 /$ 12 SP Hunt @>|
 <TX><IDLE:1>\n
 <MYCALL> <MYCALL>\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 14
 /$ 13 SP Ans @>|
 <TX><IDLE:1>\n
 <CALL> TU 599 <XBEG>2025<XEND> 2025 <MYCALL> K\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 15
@@ -147,28 +147,28 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK\n
 /$ 24 AGN? @>|
 <TX><IDLE:1>\n
 AGN AGN?\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 26
 /$ 25 Full Repeat @>|
 <TX><IDLE:1>\n
 <CALL> 599 599 2025 2025 <MYCALL>\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 27
 /$ 26 RST Repeat @>|
 <TX><IDLE:1>\n
 <CALL> 599 599 <MYCALL>\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 28
 /$ 27 Year Repeat @>|
 <TX><IDLE:1>\n
 <CALL> 2025 2025 <MYCALL>\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 29
@@ -193,45 +193,49 @@ AGN AGN?\n
 //
 // Macro # 33
 /$ 32 Feld Hell
-<MODEM:FELDHELL>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:FELDHELL>
+<RIGMODE:USB-D>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>
+
 
 //
 // Macro # 34
 /$ 33 Olivia 8-250
-<MODEM:OLIVIA:250:8>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>\n
-<RXRSID:on>\n
+<MODEM:OLIVIA:250:8>
+<RIGMODE:USB-D>
+<RXRSID:on>
 <TXRSID:on>
+<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>
+
 
 //
 // Macro # 35
 /$ 34 PSK
-<MODEM:BPSK31>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:BPSK31>
+<RIGMODE:USB-D>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>
+
 
 //
 // Macro # 36
 /$ 35 RTTY
-<MODEM:RTTY:170:45.45:5>\n
-<RIGMODE:USB-D>\n
-<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>\n
-<RXRSID:off>\n
+<MODEM:RTTY:170:45.45:5>
+<RIGMODE:RTTY>
+<RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
+
 
 //
 // Macro # 37
 /$ 36 Year? @>|
 <TX><IDLE:1>\n
 YEAR YEAR?\n
-<IDLE:1.0><RX>
+<RX>
 
 //
 // Macro # 38

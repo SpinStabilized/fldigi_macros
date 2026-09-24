@@ -11,6 +11,7 @@
 // Date       Initials Notes
 // ---------- -------- ---------------------------------------------------------
 // 2026-09-20 BMC      Initial Version
+// 2026-09-24 BMC      Cleanup newlines and idles.
 //
 // =============================================================================
 
@@ -18,35 +19,34 @@
 //
 // Macro # 1
 /$ 0 CQ @#+
-<TX><IDLE:1>
-CQ CQWW TEST <MYCALL> <MYCALL> CQ \n
+<TX><IDLE:1> CQ CQ CQWW <MYCALL> <MYCALL> CQ \n
 <RX><AFTER:15>
 
 //
 // Macro # 2
 /$ 1 Resp @>|
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 <CALL> <XBEG>599 05 MD<XEND> 599 05 MD <MYCALL> \n
 <RX>
 
 //
 // Macro # 3
 /$ 2 Run @>|
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 <CALL> TU GL <MYCALL> CQ CQ\n
 <RX>
 
 //
 // Macro # 4
 /$ 3 Stop @>|
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 <CALL> TU <MYCALL>\n
 <RX>
 
 //
 // Macro # 5
 /$ 4 QRT @>|
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 <RX>
 
@@ -78,26 +78,27 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 //
 // Macro # 11
 /$ 10 Tx @>>
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 
 
 //
 // Macro # 12
 /$ 11 Rx @||
+\n
 <RX>
 
 // Row 2 -----------------------------------------------------------------------
 //
 // Macro # 13
 /$ 12 SP Hunt @>|
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 <MYCALL> <MYCALL> \n
 <RX>
 
 //
 // Macro # 14
 /$ 13 SP Ans @>|
-<TX><IDLE:1>
+<TX><IDLE:1> \n
 <CALL> TU <XBEG>599 05 MD<XEND> 599 05 MD <MYCALL> K \n
 <RX>
 
@@ -154,21 +155,21 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 //
 // Macro # 25
 /$ 24 Full Repeat @>|
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 <CALL> 599 599 05 05 MD MD <MYCALL> \n
 <RX>
 
 //
 // Macro # 26
 /$ 25 RST Repeat @>|
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 <CALL> 599 599 <MYCALL> \n
 <RX>
 
 //
 // Macro # 27
 /$ 26 CQZ Repeat @>|
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 <CALL> 05 05 <MYCALL> \n
 <RX>
 
@@ -176,7 +177,7 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 // Macro # 28
 /$ 27 QTH Repeat @>|
 <TX><IDLE:1>\n
-<CALL> MD MD <MYCALL>\n
+<CALL> MD MD <MYCALL> \n
 <RX>
 
 //
@@ -204,36 +205,40 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 /$ 32 Feld Hell
 <MODEM:FELDHELL>
 <RIGMODE:USB-D>
-<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>
 <RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>
+
 
 //
 // Macro # 34
 /$ 33 Olivia 8-250
 <MODEM:OLIVIA:250:8>
 <RIGMODE:USB-D>
-<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>
 <RXRSID:on>
 <TXRSID:on>
+<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>
+
 
 //
 // Macro # 35
 /$ 34 PSK
 <MODEM:BPSK31>
 <RIGMODE:USB-D>
+<RXRSID:on>
+<TXRSID:on>
 <MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>
-<RXRSID:off>
-<TXRSID:off>
+
 
 //
 // Macro # 36
 /$ 35 RTTY
 <MODEM:RTTY:170:45.45:5>
 <RIGMODE:RTTY>
-<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
 <RXRSID:off>
 <TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
+
 
 // Row 4 -----------------------------------------------------------------------
 //

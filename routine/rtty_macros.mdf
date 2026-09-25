@@ -13,6 +13,7 @@
 //                  was adding <IDLE:n> with some of my end macros to keep the
 //                  modem sync up. Bad idea! Fixed and now FSK is working great
 //                  for me too.
+// 2026-09-25 BMC   Went a little too hard removing newlines, added some back in.
 // =============================================================================
 
 // Row 1 -----------------------------------------------------------------------
@@ -27,7 +28,7 @@ CQ CQ CQ DE <MYCALL> <MYCALL> PSE K\n
 //
 // Macro # 2
 /$ 1 ANS @>|
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 <CALL> <CALL> de <MYCALL> <MYCALL> KN\n
 <RX>
 
@@ -35,14 +36,14 @@ CQ CQ CQ DE <MYCALL> <MYCALL> PSE K\n
 //
 // Macro # 3
 /$ 2 QSO @>>
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 <CALL> DE <MYCALL> 
 
 
 //
 // Macro # 4
 /$ 3 KN @|| 
-<CALL> DE <MYCALL> KN
+<CALL> DE <MYCALL> KN \n
 <RX>
 
 
@@ -68,7 +69,7 @@ RUNNING AN IC-7300 AT <TX_PWR>W ON A <ANTENNA> /W FLDIGI ON A MAC MINI\n
 //
 // Macro # 8
 /$ 7 AGN? @>|
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 AGN? AGN?\n
 <RX>
 
@@ -86,12 +87,13 @@ AGN? AGN?\n
 //
 // Macro # 11
 /$ 10 Tx @>>
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 
 
 //
 // Macro # 12
 /$ 11 Rx @||
+\n
 <RX>
 
 

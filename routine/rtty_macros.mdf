@@ -20,25 +20,22 @@
 //
 // Macro # 1
 /$ 0 CQ@#-2+
-<TX><IDLE:1>\n
+<TX>\n
 CQ CQ CQ DE <MYCALL> <MYCALL> PSE K\n
 <RX><AFTER:20>
-
 
 //
 // Macro # 2
 /$ 1 ANS @>|
-<TX><IDLE:1>\n
+<TX>\n
 <CALL> <CALL> de <MYCALL> <MYCALL> KN\n
 <RX>
-
 
 //
 // Macro # 3
 /$ 2 QSO @>>
-<TX><IDLE:1>\n
+<TX>\n
 <CALL> DE <MYCALL> 
-
 
 //
 // Macro # 4
@@ -46,49 +43,41 @@ CQ CQ CQ DE <MYCALL> <MYCALL> PSE K\n
 <CALL> DE <MYCALL> KN \n
 <RX>
 
-
 //
 // Macro # 5
 /$ 4 SK @|| 
-TNX FOR QSO 73 73  <CALL> DE <MYCALL> SK   \n
+TNX FOR QSO 73 73  <CALL> DE <MYCALL> SK \n
 <RX>
-
 
 //
 // Macro # 6
 /$ 5 Me/Qth 
 <MYNAME> <MYQTH> <MYST> <MYLOC> \n
 
-
 //
 // Macro # 7
 /$ 6 Brag
 RUNNING AN IC-7300 AT <TX_PWR>W ON A <ANTENNA> /W FLDIGI ON A MAC MINI\n
 
-
 //
 // Macro # 8
 /$ 7 AGN? @>|
-<TX><IDLE:1>\n
+<TX>\n
 AGN? AGN?\n
 <RX>
-
 
 //
 // Macro # 9
 /$ 8 
 
-
 //
 // Macro # 10
 /$ 9 
 
-
 //
 // Macro # 11
 /$ 10 Tx @>>
-<TX><IDLE:1>\n
-
+<TX>\n
 
 //
 // Macro # 12
@@ -96,108 +85,87 @@ AGN? AGN?\n
 \n
 <RX>
 
-
 // Row 2 -----------------------------------------------------------------------
 //
 // Macro # 13
 /$ 12 
 
-
 //
 // Macro # 14
 /$ 13 
-
 
 //
 // Macro # 15
 /$ 14 
 
-
 //
 // Macro # 16
 /$ 15 
-
 
 //
 // Macro # 17
 /$ 16 
 
-
 //
 // Macro # 18
 /$ 17 
-
 
 //
 // Macro # 19
 /$ 18 
 
-
 //
 // Macro # 20
 /$ 19 
-
 
 //
 // Macro # 21
 /$ 20 
 
-
 //
 // Macro # 22
 /$ 21 
-
 
 //
 // Macro # 23
 /$ 22 
 
-
 //
 // Macro # 24
 /$ 23 
-
 
 // Row 3 -----------------------------------------------------------------------
 //
 // Macro # 25
 /$ 24 
 
-
 //
 // Macro # 26
 /$ 25 
-
 
 //
 // Macro # 27
 /$ 26 
 
-
 //
 // Macro # 28
 /$ 27 
-
 
 //
 // Macro # 29
 /$ 28 
 
-
 //
 // Macro # 30
 /$ 29 
-
 
 //
 // Macro # 31
 /$ 30 
 
-
 //
 // Macro # 32
 /$ 31 
-
 
 //
 // Macro # 33
@@ -208,7 +176,6 @@ AGN? AGN?\n
 <TXRSID:off>
 <MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>
 
-
 //
 // Macro # 34
 /$ 33 Olivia 8-250
@@ -217,7 +184,6 @@ AGN? AGN?\n
 <RXRSID:on>
 <TXRSID:on>
 <MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>
-
 
 //
 // Macro # 35
@@ -228,7 +194,6 @@ AGN? AGN?\n
 <TXRSID:off>
 <MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>
 
-
 //
 // Macro # 36
 /$ 35 RTTY
@@ -238,38 +203,31 @@ AGN? AGN?\n
 <TXRSID:off>
 <MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
 
-
 // Row 4 -----------------------------------------------------------------------
 //
 // Macro # 37
 /$ 36 
 
-
 //
 // Macro # 38
 /$ 37 
-
 
 //
 // Macro # 39
 /$ 38 
 
-
 //
 // Macro # 40
 /$ 39 
-
 
 //
 // Macro # 41
 /$ 40 
 
-
 //
 // Macro # 42
 /$ 41 WX 
 <EXEC>fltools wx</EXEC>
-
 
 //
 // Macro # 43

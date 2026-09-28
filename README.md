@@ -21,6 +21,10 @@ Macro files are typically stored in the `$HOME/.fldigi/macros/` directory
 
 Some things I've discovered while developing macros by hand.
 
+### Macro File Overwrite
+
+If you work on your macros outside of `fldigi` and then make updates within `fldigi`, `fldigi` will overwrite any extra comments or annotations in your files, copying the macros themselves into a base template. Use caution.
+
 ### Idle Macro Behavior
 
 For some reason, when I was new to RTTY, I thought some idle diddles at the end

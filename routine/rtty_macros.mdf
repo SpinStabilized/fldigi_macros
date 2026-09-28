@@ -20,7 +20,7 @@
 //
 // Macro # 1
 /$ 0 CQ@#-2+
-<TX><IDLE:1>
+<TX><IDLE:1>\n
 CQ CQ CQ DE <MYCALL> <MYCALL> PSE K\n
 <RX><AFTER:20>
 

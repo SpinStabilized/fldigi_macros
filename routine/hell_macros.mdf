@@ -1,11 +1,17 @@
 //fldigi macro definition file extended
-// This file defines the macro structure(s) for the digital modem program, fldigi
-// It also serves as a basis for any macros that are written by the user
+// =============================================================================
+// Author: Brian McLaughlin (N3BMC)
+// Creation Date: 2026-09-29
+// Description: Routine Hell QSO Macros
 //
-// The top line of this file should always be the first line in every macro 
-// definition file (.mdf) for the fldigi program to recognize it as such.
-//
+// Revision History:
+// Date       Init  Description
+// -----------------------------------------------------------------------------
+// 2026-09-29 BMC   Not the actual creation date but when I created added the
+//                  header.
+// =============================================================================
 
+// Row 1 -----------------------------------------------------------------------
 //
 // Macro # 1
 /$ 0 CQ @#-2+
@@ -31,7 +37,7 @@
 //
 // Macro # 5
 /$ 4 SK @||
-TNX GL 73 73  <CALL> DE <MYCALL> SK <RX>
+TNX GL 73 73 <CALL> DE <MYCALL> SK<RX>
 
 //
 // Macro # 6
@@ -42,7 +48,7 @@ TNX GL 73 73  <CALL> DE <MYCALL> SK <RX>
 //
 // Macro # 7
 /$ 6 Brag
-Rig: IC-7300 @ <TX_PWR> ON <ANTENNA> 
+Rig: IC-7300 @ <TX_PWR>W ON <ANTENNA> 
 
 
 //
@@ -70,6 +76,7 @@ Rig: IC-7300 @ <TX_PWR> ON <ANTENNA>
 /$ 11 TX @>|
 <TX> de <MYCALL> k <RX>
 
+// Row 2 -----------------------------------------------------------------------
 //
 // Macro # 13
 /$ 12 
@@ -129,7 +136,7 @@ Rig: IC-7300 @ <TX_PWR> ON <ANTENNA>
 // Macro # 24
 /$ 23 
 
-
+// Row 3 -----------------------------------------------------------------------
 //
 // Macro # 25
 /$ 24 
@@ -208,7 +215,7 @@ Rig: IC-7300 @ <TX_PWR> ON <ANTENNA>
 <TXRSID:off>
 <MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
 
-
+// Row 4 -----------------------------------------------------------------------
 //
 // Macro # 37
 /$ 36 

@@ -1,11 +1,17 @@
 //fldigi macro definition file extended
-// This file defines the macro structure(s) for the digital modem program, fldigi
-// It also serves as a basis for any macros that are written by the user
+// =============================================================================
+// Author: Brian McLaughlin (N3BMC)
+// Creation Date: 2026-09-29
+// Description: Routine Olivia QSO Macros
 //
-// The top line of this file should always be the first line in every macro 
-// definition file (.mdf) for the fldigi program to recognize it as such.
-//
+// Revision History:
+// Date       Init  Description
+// -----------------------------------------------------------------------------
+// 2026-09-29 BMC   Not the actual creation date but when I created added the
+//                  header.
+// =============================================================================
 
+// Row 1 -----------------------------------------------------------------------
 //
 // Macro # 1
 /$ 0 CQ@#-2+
@@ -25,13 +31,11 @@ CQ CQ CQ de <MYCALL> <MYCALL> pse k  \n
 /$ 2 QSO @>>
 <TX><CALL> de <MYCALL>\n
 
-
 //
 // Macro # 4
 /$ 3 KN @||
 btu <CALL> de <MYCALL> kn\n
 <RX>
-
 
 //
 // Macro # 5
@@ -44,7 +48,6 @@ btu <CALL> de <MYCALL> kn\n
 /$ 5 Me/Qth
 Name here is <MYNAME> in <MYQTH>, <MYST> at <MYLOC>. \n
 
-
 //
 // Macro # 7
 /$ 6 Brag
@@ -54,7 +57,6 @@ Pwr: <TX_PWR>W\n
 Ant: <ANTENNA>\n
 Cmp: M4 MacMini\n
 Sw : <VER>\n
-
 
 //
 // Macro # 8
@@ -83,108 +85,90 @@ Sw : <VER>\n
 <TX> <CALL> de <MYCALL> k\n
 <RX>
 
+// Row 2 -----------------------------------------------------------------------
 //
 // Macro # 13
 /$ 12 Signal Good
 I have a good copy: <INFO1>\n
-
 
 //
 // Macro # 14
 /$ 13 Rough Copy
 I have an ok copy, loosing some characters: <INFO1>\n
 
-
 //
 // Macro # 15
 /$ 14 WX 
 <EXEC>fltools wx</EXEC>\n
 
-
 //
 // Macro # 16
 /$ 15 
-
 
 //
 // Macro # 17
 /$ 16 
 
-
 //
 // Macro # 18
 /$ 17 
-
 
 //
 // Macro # 19
 /$ 18 
 
-
 //
 // Macro # 20
 /$ 19 
-
 
 //
 // Macro # 21
 /$ 20 
 
-
 //
 // Macro # 22
 /$ 21 
-
 
 //
 // Macro # 23
 /$ 22 
 
-
 //
 // Macro # 24
 /$ 23 
 
-
+// Row 3 -----------------------------------------------------------------------
 //
 // Macro # 25
 /$ 24 
-
 
 //
 // Macro # 26
 /$ 25 
 
-
 //
 // Macro # 27
 /$ 26 
-
 
 //
 // Macro # 28
 /$ 27 
 
-
 //
 // Macro # 29
 /$ 28 
-
 
 //
 // Macro # 30
 /$ 29 
 
-
 //
 // Macro # 31
 /$ 30 
 
-
 //
 // Macro # 32
 /$ 31 
-
 
 //
 // Macro # 33
@@ -195,7 +179,6 @@ I have an ok copy, loosing some characters: <INFO1>\n
 <TXRSID:off>
 <MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>
 
-
 //
 // Macro # 34
 /$ 33 Olivia 8-250
@@ -204,7 +187,6 @@ I have an ok copy, loosing some characters: <INFO1>\n
 <RXRSID:on>
 <TXRSID:on>
 <MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>
-
 
 //
 // Macro # 35
@@ -215,7 +197,6 @@ I have an ok copy, loosing some characters: <INFO1>\n
 <TXRSID:off>
 <MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>
 
-
 //
 // Macro # 36
 /$ 35 RTTY
@@ -225,41 +206,34 @@ I have an ok copy, loosing some characters: <INFO1>\n
 <TXRSID:off>
 <MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
 
-
+// Row 4 -----------------------------------------------------------------------
 //
 // Macro # 37
 /$ 36 
-
 
 //
 // Macro # 38
 /$ 37 
 
-
 //
 // Macro # 39
 /$ 38 
-
 
 //
 // Macro # 40
 /$ 39 
 
-
 //
 // Macro # 41
 /$ 40 
-
 
 //
 // Macro # 42
 /$ 41 
 
-
 //
 // Macro # 43
 /$ 42 
-
 
 //
 // Macro # 44

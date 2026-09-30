@@ -23,7 +23,9 @@ Some things I've discovered while developing macros by hand.
 
 ### Macro File Overwrite
 
-If you work on your macros outside of `fldigi` and then make updates within `fldigi`, `fldigi` will overwrite any extra comments or annotations in your files, copying the macros themselves into a base template. Use caution.
+If you work on your macros outside of `fldigi` and then make updates within
+`fldigi`, `fldigi` will overwrite any extra comments or annotations in your
+files, copying the macros themselves into a base template. Use caution.
 
 ### Idle Macro Behavior
 
@@ -34,6 +36,14 @@ have a `<TX>` in it as well. It will cause the macro execution to lock up and
 the transeiver to stay keyed up transmitting the idle pattern. For the longest
 time I thought I had issues with the FSK setup through FLRig but it
 was just these extra `<IDLE:n>` calls.
+
+That being said, at least for RTTY, don't use the `<IDLE:n>` macro at all. If
+you are working FSK RTTY through `flrig` like I am, you can set a number of
+idle characters to be sent at the start of a transmission. If you are using
+`fldigi` AFSK mode, in the TTY modem "Tx" configuration, you can set a number of
+`LTRS` characters to transmit at the start of every transmission. This is a
+nice clean way of handling those idle diddles, which are really just repeated
+`LTRS` characters.
 
 For more information on why diddles are good at the start of your RTTY macros:
 [Diddles by W7AY](https://www.aa5au.com/rtty/diddles-by-w7ay/)
@@ -70,7 +80,7 @@ to open (bad path, ~ not expanded, file moved), fldigi doesn't skip the tag
 quietly. It falls back to regenerating fldigi's stock default macro set and
 saving it to disk, overwriting your macros file. A single typo'd path in a macro
 button can silently replace your real macro file with the factory defaults the
-next time you press that button.
+next time you trigger that macro.
 
 ### Empty Call Field And The `<LOG:>`/`<LNW:>` Macros
 

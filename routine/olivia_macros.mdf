@@ -17,7 +17,7 @@
 /$ 0 CQ@#-2+
 <TX>\n
 CQ CQ CQ de <MYCALL> <MYCALL>\n
-CQ CQ CQ de <MYCALL> <MYCALL> pse k  \n
+CQ CQ CQ de <MYCALL> <MYCALL> pse k\n
 <RX><AFTER:60>
 
 //
@@ -46,7 +46,7 @@ btu <CALL> de <MYCALL> kn\n
 //
 // Macro # 6
 /$ 5 Me/Qth
-Name here is <MYNAME> in <MYQTH>, <MYST> at <MYLOC>. \n
+Name here is <MYNAME> in <MYQTH>, <MYST> at <MYLOC>.\n
 
 //
 // Macro # 7

@@ -23,12 +23,12 @@
 //
 // Macro # 3
 /$ 2 Run @>|
-<TX> <CALL> TU <MYCALL> QRZ? K <RX>
+<TX> <CALL> TU <MYCALL> CQ<RX>
 
 //
 // Macro # 4
 /$ 3 Stop @>|
-<TX> <CALL> TU <MYCALL> <RX>
+<TX> <CALL> TU <MYCALL><RX>
 
 //
 // Macro # 5
@@ -72,7 +72,7 @@
 //
 // Macro # 13
 /$ 12 SP Hunt @>|
-<TX><CALL> DE <MYCALL> <MYCALL> <RX>
+<TX><CALL> DE <MYCALL> <MYCALL><RX>
 
 //
 // Macro # 14

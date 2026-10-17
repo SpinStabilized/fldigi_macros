@@ -19,7 +19,7 @@
 // Macro # 1
 /$ 0 CQ @#+
 <TX>\n
-CQ CQ WW <MYCALL> <MYCALL> CQ \n
+CQ CQ JARL <MYCALL> <MYCALL> CQ \n
 <RX><AFTER:10>
 
 //
@@ -54,8 +54,6 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 // Macro # 6
 /$ 5  Log
 <LOG>
-<EXEC>fltools clublog</EXEC>
-<EXEC>fltools qrz</EXEC>
 
 //
 // Macro # 7
@@ -96,7 +94,7 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 // Macro # 14
 /$ 13 SP Ans @>|
 <TX>\n
-<CALL> TU <XBEG>47<XEND> 47 <MYCALL>\n
+<CALL> TU <XBEG>599 47<XEND> 47 <MYCALL>\n
 <RX>
 
 //

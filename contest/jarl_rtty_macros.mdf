@@ -149,14 +149,14 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 // Macro # 26
 /$ 25 RST Repeat @>|
 <TX>\n
-<CALL> 599 599 <MYCALL> \n
+ 599 599 \n
 <RX>
 
 //
 // Macro # 27
 /$ 26 Age Repeat @>|
 <TX>\n
-<CALL> 47 47 <MYCALL> \n
+ 47 47 \n
 <RX>
 
 //
@@ -225,21 +225,24 @@ AGN AGN? \n
 
 //
 // Macro # 38
-/$ 37 AGE? @>|
+/$ 37 RST? @>|
+<TX>\n
+RST RST? \n
+<RX>
+
+//
+// Macro # 39
+/$ 38 AGE? @>|
 <TX>\n
 AGE AGE? \n
 <RX>
 
 //
-// Macro # 39
-/$ 38 CALL? @>|
+// Macro # 40
+/$ 39 CALL? @>|
 <TX>\n
 CALL CALL? \n
 <RX>
-
-//
-// Macro # 40
-/$ 39 
 
 //
 // Macro # 41

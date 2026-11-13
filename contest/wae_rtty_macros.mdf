@@ -1,33 +1,17 @@
 //fldigi macro definition file extended
 // =============================================================================
-// Description: Contest macros for DARC Worked All Europe DX Contest (WAEDC), RTTY
+// Description: Contest macros for DARC Worked All Europe (WAE), RTTY
 // WAEDC Rules: https://www.darc.de/der-club/referate/conteste/wae-dx-contest/en/wae-rules/
 //
-// EXCHANGE = RST SERIAL (001, 002, ...)
-//
-// fldigi setup: Contest = Generic contest, serial numbers on (start 1, 3 digits,
-// leading zeros, press Reset), RST always 599. WAE is not in fldigi's contest list.
-// <CNTR> is the #Out serial. Test once that <LOG> advances #Out by itself; if it
-// does not, add <INCR> after <LOG> in macro 6.
-//
-// QTC traffic (row 2): use Logbook > QTC Manager > TX ("Send all QTC", per-row
-// "TX QTC" for repeats) and > RX ("Save") for the QTC series themselves; the row 2
-// macros handle the talk around them (offer, QRV, QSL ALL, AGN, TU).
-// Fallback if the QTC Manager misbehaves: macro 16 transmits the text file
-// /Users/brian/.fldigi/qtc/qtc_send.txt. Prepare that file (macro 23 opens it
-// in TextEdit) before you offer QTCs. Format, one QTC per line, header first:
-//     QTC 1/10 QTC 1/10
-//     0012 DL1ABC 045
-//     ...
-// Track series number, time and band of every series sent or received; a series
-// missing any of them gets no credit.
+// EXCHANGE = RST SERIAL
 //
 // Brian McLaughlin (N3BMC) <n3bmc@arrl.net>
 //
 // History:
 // Date       Initials Notes
 // ---------- -------- ---------------------------------------------------------
-// 2026-11-13 BMC      Initial Version, from cq_ww_rtty_macros.mdf
+// 2026-11-13 BMC      Created from the JARL WW RTTY macros written for 2026
+//
 // =============================================================================
 
 // Row 1 -----------------------------------------------------------------------
@@ -49,7 +33,7 @@ CQ CQ WAE <MYCALL> <MYCALL> CQ \n
 // Macro # 3
 /$ 2 Run @>|
 <TX>\n
-<CALL> TU GL <MYCALL> CQ CQ\n
+<CALL> TU GL <MYCALL> CQ\n
 <RX>
 
 //
@@ -69,11 +53,10 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 //
 // Macro # 6
 /$ 5  Log
-<LOG><EXEC>fltools clublog</EXEC>
+<LOG><EXEC>fltools clublog</EXEC><INCR>
 
 //
 // Macro # 7
-// Run: close the QSO and offer QTCs (use with non-NA stations only)
 /$ 6 TU QTC? @>|
 <TX>\n
 <CALL> TU QTC? <MYCALL>\n
@@ -119,7 +102,6 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 
 //
 // Macro # 15
-// S&P: answer and offer QTCs (use with non-NA stations only)
 /$ 14 SP Ans QTC? @>|
 <TX>\n
 <CALL> TU 599 <CNTR> <CNTR> QTC? <MYCALL>\n
@@ -127,20 +109,15 @@ DE <MYCALL> QRT QRT DE <MYCALL> SK \n
 
 //
 // Macro # 16
-// QTC sending, FALLBACK ONLY (normally use QTC Manager TX "Send all QTC"):
-// transmit the prepared series file after the other station says QRV.
-// The leading space keeps the newline before <FILE:>; the last line starts with
-// plain text for the same reason.
 /$ 15 QTC Send @>|
 <TX>\n
 <CALL> DE <MYCALL> \n
- <FILE:/Users/brian/.fldigi/qtc/qtc_send.txt>
+ <EXEC>cat "$HOME/.fldigi/qtc/qtc_send.txt"</EXEC>
 END QTC <CALL> QSL? <MYCALL> \n
 <RX>
 
 //
 // Macro # 17
-// QTC sending: other station confirmed QSL ALL
 /$ 16 QTC TU @>|
 <TX>\n
 <CALL> TU QSL QTC GL <MYCALL>\n
@@ -148,7 +125,6 @@ END QTC <CALL> QSL? <MYCALL> \n
 
 //
 // Macro # 18
-// QTC receiving: other station offered QTCs
 /$ 17 QTC QRV @>|
 <TX>\n
 <CALL> QRV QTC <MYCALL>\n
@@ -156,7 +132,6 @@ END QTC <CALL> QSL? <MYCALL> \n
 
 //
 // Macro # 19
-// QTC receiving: all lines copied
 /$ 18 QSL ALL @>|
 <TX>\n
 <CALL> QSL ALL QTC TU <MYCALL>\n
@@ -164,14 +139,12 @@ END QTC <CALL> QSL? <MYCALL> \n
 
 //
 // Macro # 20
-// QTC receiving: starts TX, type the line numbers to repeat, then press Rx
 /$ 19 QTC AGN @>>
 <TX>\n
-<CALL> AGN QTC NR
+<CALL> AGN QTC NR 
 
 //
 // Macro # 21
-// Decline QTCs (limit of 10 reached, or same continent)
 /$ 20 No QTC @>|
 <TX>\n
 <CALL> SRI NO QTC TU <MYCALL>\n
@@ -184,7 +157,7 @@ END QTC <CALL> QSL? <MYCALL> \n
 //
 // Macro # 23
 /$ 22 QTC Edit
-<EXEC>/usr/local/bin/code /Users/brian/.fldigi/qtc/qtc_send.txt >/dev/null 2>&1 &</EXEC>
+<EXEC>/usr/local/bin/code "$HOME/.fldigi/qtc/qtc_send.txt" >/dev/null 2>&1 &</EXEC>
 
 //
 // Macro # 24
@@ -195,21 +168,21 @@ END QTC <CALL> QSL? <MYCALL> \n
 // Macro # 25
 /$ 24 Full Repeat @>|
 <TX>\n
-<CALL> 599 <CNTR> <CNTR> <CNTR> <MYCALL> \n
+<CALL> 599 <CNTR> <CNTR> <MYCALL> \n
 <RX>
 
 //
 // Macro # 26
 /$ 25 RST Repeat @>|
 <TX>\n
-<CALL> 599 599 <MYCALL> \n
+ 599 599 \n
 <RX>
 
 //
 // Macro # 27
 /$ 26 NR Repeat @>|
 <TX>\n
-<CALL> NR <CNTR> <CNTR> <CNTR> <MYCALL> \n
+ <CNTR> <CNTR> \n
 <RX>
 
 //
@@ -292,16 +265,16 @@ NR NR? \n
 
 //
 // Macro # 40
-/$ 39 QTC? @>|
+/$ 39 CALL? @>|
 <TX>\n
-<CALL> QTC? <MYCALL>\n
+CALL CALL? \n
 <RX>
 
 //
 // Macro # 41
-/$ 40 CALL? @>|
+/$ 40 QTC? @>|
 <TX>\n
-CALL CALL? \n
+<CALL> QTC? <MYCALL>\n
 <RX>
 
 //

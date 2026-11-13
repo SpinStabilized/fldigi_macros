@@ -283,7 +283,8 @@ CALL CALL? \n
 
 //
 // Macro # 43
-/$ 42 
+/$ 42 fltools Log
+<EXEC>open -a Console "$HOME/Library/Logs/fltools/fltools.log" >/dev/null 2>&1 &</EXEC>
 
 //
 // Macro # 44

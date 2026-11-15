@@ -1,0 +1,360 @@
+//fldigi macro definition file extended
+// =============================================================================
+// Description: Contest macros for DARC Worked All Europe DX Contest (WAEDC), RTTY
+// WAEDC Rules: https://www.darc.de/der-club/referate/conteste/wae-dx-contest/en/wae-rules/
+//
+// EXCHANGE = RST SERIAL (001, 002, ...)
+//
+// BEFORE THE CONTEST (lessons from 2026):
+// - fldigi: Contest = Generic contest, serial numbers on (start 1, 3 digits,
+//   leading zeros). TAB OUT of Start, then press Reset (#Out must show 001).
+//   RST always 599. Tick Band in the dupe check (each station once per band).
+// - Disconnect the N3FJP link: while connected, #Out shows N3FJP's number,
+//   which can differ from what <CNTR> sends.
+// - Logbook > QTC Manager > Reset QTCs after any testing.
+// - New logbook for the contest.
+//
+// DURING THE CONTEST:
+// - Log ONLY with macro 6. Any other way skips <INCR> and repeats a serial.
+// - Check Serial # In before logging (2026: one QSO logged with my own serial).
+// - Tags after </EXEC> are not run, so <EXEC> is always last in a macro.
+// - QTCs go between different continents only: anyone outside North America
+//   (Caribbean, Central America and Greenland are North America).
+// - Up to 10 QTCs per station pair, sent plus received. Check View QTCs.
+// - Send QTCs ONLY with QTC Manager TX > Send all QTC (it sends the header).
+//   Per-row TX QTC is for repeats only, and wait for each to finish.
+// - Receive: type each dashed line (0745-JG8JBX-28) into QTC Manager RX, Save.
+// - Calling: after 3-4 unanswered calls, move on and come back later.
+//
+// WHAT THE OTHER STATIONS SAID (2026):
+// - "DO YOU WANT QTC?" / "QTC?"  = they offer to send       -> macro 18
+// - "SEND ME QTC" / "QTC FOR ME?" = they want mine          -> macro 16
+// - "QTC RX/TX?" / "WANT/HAVE QTC?" = which way?            -> 16 or 18
+// - Sender: "QTC 37/10 R U QRV? BK"; receiver: "QRV PSE GO" / "I AM QRV BK"
+// - Receiver: "R R R ALL OK BK" or "AGN QTC 7 7 7" or "AGN HEADER"
+//
+// AFTER THE CONTEST:
+// - Fix the frequency (band you sent on) and mode (RY) of sent QTC lines in
+//   qtc-log.tsv or the Cabrillo file; delete any series never confirmed.
+// - Fill in the Cabrillo header; fldigi leaves the categories blank.
+// - Upload: dxhf2.darc.de/~waerttylog/upload.cgi (deadline one week later).
+//
+// Brian McLaughlin (N3BMC) <n3bmc@arrl.net>
+//
+// History:
+// Date       Initials Notes
+// ---------- -------- ---------------------------------------------------------
+// 2026-11-13 BMC      Created from the JARL WW RTTY macros written for 2026
+// 2026-11-15 BMC      2027 starter: lessons from WAE RTTY 2026, QTC phrasing,
+//                     <EXEC> moved last in Log, file-based QTC fallback removed
+//
+// =============================================================================
+
+// Row 1 -----------------------------------------------------------------------
+//
+// Macro # 1
+/$ 0 CQ @#+
+<TX>\n
+CQ CQ WAE <MYCALL> <MYCALL> CQ\n
+<RX><AFTER:10>
+
+//
+// Macro # 2
+/$ 1 Resp @>|
+<TX>\n
+<CALL> 599 <CNTR> <CNTR> <MYCALL>\n
+<RX>
+
+//
+// Macro # 3
+/$ 2 Run @>|
+<TX>\n
+<CALL> TU GL <MYCALL> CQ\n
+<RX>
+
+//
+// Macro # 4
+/$ 3 Stop @>|
+<TX>\n
+<CALL> TU <MYCALL>\n
+<RX>
+
+//
+// Macro # 5
+/$ 4 QRT @>|
+<TX>\n
+DE <MYCALL> QRT QRT DE <MYCALL> SK\n
+<RX>
+
+//
+// Macro # 6
+// Log, advance the serial, then upload. <EXEC> must stay last.
+/$ 5  Log
+<LOG><INCR><EXEC>fltools clublog</EXEC>
+
+//
+// Macro # 7
+// Run: close the QSO and ask which way QTCs go (non-NA stations only)
+/$ 6 TU QTC? @>|
+<TX>\n
+<CALL> TU WANT/HAVE QTC? <MYCALL>\n
+<RX>
+
+//
+// Macro # 8
+/$ 7 
+
+//
+// Macro # 9
+/$ 8 
+
+//
+// Macro # 10
+/$ 9 
+
+//
+// Macro # 11
+/$ 10 Tx @>>
+<TX>\n
+
+//
+// Macro # 12
+/$ 11 Rx @||
+\n
+<RX>
+
+// Row 2 -----------------------------------------------------------------------
+//
+// Macro # 13
+/$ 12 SP Hunt @>|
+<TX>\n
+<MYCALL> <MYCALL>\n
+<RX>
+
+//
+// Macro # 14
+/$ 13 SP Ans @>|
+<TX>\n
+<CALL> TU 599 <CNTR> <CNTR> <MYCALL>\n
+<RX>
+
+//
+// Macro # 15
+// S&P: answer and ask which way QTCs go (non-NA stations only)
+/$ 14 SP Ans QTC? @>|
+<TX>\n
+<CALL> TU 599 <CNTR> <CNTR> WANT/HAVE QTC? <MYCALL>\n
+<RX>
+
+//
+// Macro # 16
+// QTC sending: they want mine. Ask if ready, then QTC Manager TX > Send all QTC.
+/$ 15 Have QTC @>|
+<TX>\n
+<CALL> I HAVE QTC FOR YOU R U QRV? BK\n
+<RX>
+
+//
+// Macro # 17
+// QTC sending: other station confirmed (R R R ALL OK / QSL ALL)
+/$ 16 QTC TU @>|
+<TX>\n
+<CALL> TU QSL QTC GL <MYCALL>\n
+<RX>
+
+//
+// Macro # 18
+// QTC receiving: they offered QTCs. Then open QTC Manager RX.
+/$ 17 QTC QRV @>|
+<TX>\n
+<CALL> I AM QRV PSE GO BK\n
+<RX>
+
+//
+// Macro # 19
+// QTC receiving: all lines copied. Then Save in QTC Manager RX.
+/$ 18 QSL ALL @>|
+<TX>\n
+R R R ALL OK QSL ALL TU <MYCALL>\n
+<RX>
+
+//
+// Macro # 20
+// QTC receiving: starts TX; type the line number three times and BK
+// (for example "7 7 7 BK"), then press Rx
+/$ 19 QTC AGN @>>
+<TX>\n
+AGN QTC 
+
+//
+// Macro # 21
+// QTC receiving: header not copied
+/$ 20 AGN HDR @>|
+<TX>\n
+AGN HEADER AGN HEADER BK\n
+<RX>
+
+//
+// Macro # 22
+// Decline QTCs: both stations in North America, or 10 already exchanged
+/$ 21 No QTC @>|
+<TX>\n
+<CALL> SRI NO QTC TU <MYCALL>\n
+<RX>
+
+//
+// Macro # 23
+/$ 22 
+
+//
+// Macro # 24
+/$ 23 
+
+// Row 3 -----------------------------------------------------------------------
+//
+// Macro # 25
+/$ 24 Full Repeat @>|
+<TX>\n
+<CALL> 599 <CNTR> <CNTR> <MYCALL>\n
+<RX>
+
+//
+// Macro # 26
+/$ 25 RST Repeat @>|
+<TX>\n
+599 599\n
+<RX>
+
+//
+// Macro # 27
+/$ 26 NR Repeat @>|
+<TX>\n
+<CNTR> <CNTR>\n
+<RX>
+
+//
+// Macro # 28
+/$ 27 
+
+//
+// Macro # 29
+/$ 28 
+
+//
+// Macro # 30
+/$ 29 
+
+//
+// Macro # 31
+/$ 30 
+
+//
+// Macro # 32
+/$ 31 
+
+//
+// Macro # 33
+/$ 32 Feld Hell
+<MODEM:FELDHELL>
+<RIGMODE:USB-D>
+<RXRSID:off>
+<TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/hell_macros.mdf>
+
+//
+// Macro # 34
+/$ 33 Olivia 8-250
+<MODEM:OLIVIA:250:8>
+<RIGMODE:USB-D>
+<RXRSID:on>
+<TXRSID:on>
+<MACROS:/Users/brian/.fldigi/macros/olivia_macros.mdf>
+
+//
+// Macro # 35
+/$ 34 PSK
+<MODEM:BPSK31>
+<RIGMODE:USB-D>
+<RXRSID:on>
+<TXRSID:on>
+<MACROS:/Users/brian/.fldigi/macros/psk_macros.mdf>
+
+//
+// Macro # 36
+/$ 35 RTTY
+<MODEM:RTTY:170:45.45:5>
+<RIGMODE:RTTY>
+<RXRSID:off>
+<TXRSID:off>
+<MACROS:/Users/brian/.fldigi/macros/rtty_macros.mdf>
+
+// Row 4 -----------------------------------------------------------------------
+//
+// Macro # 37
+/$ 36 AGN? @>|
+<TX>\n
+AGN AGN?\n
+<RX>
+
+//
+// Macro # 38
+/$ 37 RST? @>|
+<TX>\n
+RST RST?\n
+<RX>
+
+//
+// Macro # 39
+/$ 38 NR? @>|
+<TX>\n
+NR NR?\n
+<RX>
+
+//
+// Macro # 40
+/$ 39 CALL? @>|
+<TX>\n
+CALL CALL?\n
+<RX>
+
+//
+// Macro # 41
+/$ 40 QTC? @>|
+<TX>\n
+<CALL> WANT/HAVE QTC? <MYCALL>\n
+<RX>
+
+//
+// Macro # 42
+/$ 41 
+
+//
+// Macro # 43
+// Open the fltools log in Console, which follows new lines as they are written
+/$ 42 fltools Log
+<EXEC>open -a Console "$HOME/Library/Logs/fltools/fltools.log" >/dev/null 2>&1 &</EXEC>
+
+//
+// Macro # 44
+/$ 43 Entry to ClubLog
+<EXEC>fltools clublog</EXEC>
+
+//
+// Macro # 45
+/$ 44 Entry to QRZ
+<EXEC>fltools qrz</EXEC>
+
+//
+// Macro # 46
+/$ 45 CLR Tx
+<CLRTX>
+
+//
+// Macro # 47
+/$ 46 CLR Rx
+<CLRRX>
+
+//
+// Macro # 48
+/$ 47 CLRALL
+<CLRRX><CLRTX>
